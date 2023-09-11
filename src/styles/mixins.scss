@@ -1,0 +1,9 @@
+@mixin slide-animation($in, $out) {
+    &-in {
+      animation: #{$in};
+    }
+  
+    &-out {
+      animation: #{$out};
+    }
+  }

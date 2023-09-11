@@ -1,0 +1,41 @@
+@import './animations.scss';
+@import './mixins.scss';
+
+
+.react-epic-layers {
+    >.rel-container {
+        width: 100% !important;
+        height: 100% !important;
+        position: relative !important;
+        overflow: hidden;
+        background-color: #fff;
+    }
+
+    .rel-layer {
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        overflow: hidden !important;
+        background-color: inherit;
+
+        > :first-child {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+        }
+
+        &.slide-x {
+            @include slide-animation(slide-x-in both 0.3s ease-in-out, slide-x-out both 0.3s ease-in-out);
+        }
+
+        &.slide-y {
+            @include slide-animation(slide-y-in both 0.3s ease-in-out, slide-y-out both 0.3s ease-in-out);
+        }
+        &.scale{
+            @include slide-animation(scale-in both 0.3s ease-in-out, scale-out both 0.3s ease-in-out);
+        }
+    }
+}
+
